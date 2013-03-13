@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<entry xml:lang="en-US" xmlns:fsm="http://dret.net/fsm/1.0" xmlns="http://www.w3.org/2005/Atom">
+  <id>{{ entry.atom_id }}</id>
+  <link href="{{ entry.uri }}" rel="alternate"/>
+  <link href="{{ url_for('entry', e_id=entry.id, _external=True) }}" rel="edit"/>
+  <title>{{ entry.name }}</title>
+  <link href="{{ entry.e_type }}" rel="profile"/>
+  <summary>{{ entry.desc }}</summary>
+  <content src="{{ entry.uri }}"/>
+  {% if entry.query %}
+  <fsm:query>{{ entry.query }}</fsm:query>
+  {% endif %}
+</entry>

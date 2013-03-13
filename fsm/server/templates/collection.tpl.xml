@@ -1,0 +1,9 @@
+<collection xmlns="http://www.w3.org/2007/app"
+         xmlns:atom="http://www.w3.org/2005/Atom"
+  href="{{ url_for('bundle', short_name=bundle.short_name, _external=True) }}">
+  <atom:title type="text">{{ bundle.name }}</atom:title>
+  <accept>application/atom+xml; type=entry</accept>
+  {% if bundle.min_lat %}
+    <georss:where><georss:box>{{bundle.min_lat}} {{bundle.min_lon}} {{bundle.max_lat}} {{bundle.max_lon}}</georss:box></georss:where>
+  {% endif %}
+</collection>

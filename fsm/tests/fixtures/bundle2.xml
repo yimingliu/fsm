@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<collection xmlns="http://www.w3.org/2007/app" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:georss="http://www.georss.org/georss">
+  <atom:title>Spatial Feeds 303</atom:title>
+  <accept>application/atom=xml;type=entry</accept>
+  <georss:box>37.8685 -122.2680 37.8796 -122.2533</georss:box>
+</collection>

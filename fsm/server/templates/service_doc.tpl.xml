@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.w3.org/2007/app"
+         xmlns:atom="http://www.w3.org/2005/Atom">
+  <workspace xml:lang="en-US" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <atom:title type="text">FSM bundles</atom:title>
+    {% for bundle in bundles %}
+        <collection
+          href="{{ url_for('bundle', short_name=bundle.short_name, _external=True) }}">
+          <atom:title type="text">{{ bundle.name }}</atom:title>
+          {% if bundle.min_lat %}
+            <georss:box>{{bundle.min_lat}} {{bundle.min_lon}} {{bundle.max_lat}} {{bundle.max_lon}}</georss:box>
+          {% endif %}
+          <accept>application/atom+xml; type=entry</accept>
+        </collection>
+    {% endfor %}
+
+  </workspace>
+</service>

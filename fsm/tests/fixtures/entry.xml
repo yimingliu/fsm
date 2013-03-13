@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<entry xml:lang="en-US" xmlns:fsm="http://dret.net/fsm/1.0" xmlns="http://www.w3.org/2005/Atom">
+  <link href="http://geofeeds.org/unemployment2011" rel="alternate"/>
+  <title>Unemployment Rates 2011</title>
+  <link href="http://dret.net/fsm/1.0/service-entry" rel="profile"/>
+  <summary>Subscription to http://geofeeds.org/unemployment2011</summary>
+  <content src="http://geofeeds.org/unemployment2011"/>
+  <fsm:query>state=CA</fsm:query>
+</entry>
